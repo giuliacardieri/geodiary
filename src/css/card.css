@@ -1,0 +1,43 @@
+.card__link {
+  background-color: var(--dark);
+  box-shadow: 4px 4px 8px var(--transparent-dark);
+  border-radius: var(--border-radius);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card__link:hover,
+.card__link:active,
+.card__link:focus {
+  transform: scale(1.1);
+}
+
+.card__header {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card__flag {
+  width: 2.5rem;
+}
+
+.card__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.card__category {
+  background-color: var(--secondary-light-blue);
+  border-radius: var(--border-radius);
+  color: var(--dark);
+  font-size: 0.75rem;
+  padding: 0.25rem;
+}
