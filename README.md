@@ -1,4 +1,4 @@
-# GeoDiary
+# GeoTips
 
 A web app to store all my Geoguessr secrets and tips.
 Made with React and TypeScript.

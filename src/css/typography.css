@@ -1,18 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap");
 
 h1 {
-  color: var(--white);
-  font-size: 3rem;
+  color: var(--primary-blue);
+  font-size: 2.5rem;
+  line-height: 1;
   margin: 0;
 }
 
 h2 {
   font-size: 2rem;
+  line-height: 1;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1;
   margin: 0;
 }
 
 p {
   font-size: 1rem;
+  line-height: 1.2;
   margin: 0;
 }
 

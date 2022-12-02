@@ -1,9 +1,11 @@
 import "../css/header.css";
+import "../css/illustrations.css";
 
 function Header() {
   return (
     <header className="header">
-      <h1>GeoDiary</h1>
+      <div className="earth"></div>
+      <h1>GeoTips</h1>
     </header>
   );
 }

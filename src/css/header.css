@@ -1,4 +1,6 @@
 .header {
-  background-color: var(--primary-blue);
-  padding: 1rem;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
 }
