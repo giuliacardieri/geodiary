@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/cardGrid.css";
 import Card from "./Card";
+import Country from "../interfaces/Country.interface";
 
 /*
 props:
@@ -14,41 +15,57 @@ props:
 - filtering
   - string
   - category
-
-this component should get all countries from storage and do the actions
-might be easier to break it down, lets see
 */
 
-interface Country {
-  name: string;
-  flag: string;
-  tips: number;
-  linkName: string;
-  categories: string[];
-}
+interface CardGridProps {}
 
-class CardGrid extends React.Component {
+class CardGrid extends React.Component<
+  CardGridProps,
+  { countries: Country[] }
+> {
+  constructor(props: CardGridProps) {
+    super(props);
+    this.state = {
+      countries: [
+        {
+          name: "Brazil",
+          linkName: "brazil",
+          flag: "br",
+          tips: 10,
+          categories: ["cars", "landscape"],
+        },
+        {
+          name: "Dominican Republic",
+          linkName: "dominican-republic",
+          flag: "do",
+          tips: 2,
+          categories: ["brands", "landscape"],
+        },
+      ],
+    };
+  }
+
+  getCountries(): Country[] {
+    const countriesData: string | null =
+      localStorage.getItem("geotips-countries");
+    let countries: Country[] = [];
+    if (countriesData) countries = JSON.parse(countriesData);
+    return countries;
+  }
+
+  setCountries(country: Country) {
+    const countries: Country[] = this.getCountries();
+    countries.push(country);
+    this.setState({
+      countries: countries,
+    });
+    localStorage.setItem("geotips-countries", JSON.stringify(countries));
+  }
+
   render() {
-    let countries: Country[] = [
-      {
-        name: "Brazil",
-        linkName: "brazil",
-        flag: "br",
-        tips: 10,
-        categories: ["cars", "landscape"],
-      },
-      {
-        name: "Dominican Republic",
-        linkName: "dominican-republic",
-        flag: "do",
-        tips: 2,
-        categories: ["brands", "landscape"],
-      },
-    ];
-
     return (
       <ul className="card-grid">
-        {countries.map((country) => (
+        {this.state.countries.map((country: Country) => (
           <Card country={country} />
         ))}
       </ul>

@@ -1,19 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
+import Country from "../interfaces/Country.interface";
+
 import "../css/card.css";
 
 /*
 add interfaces in a file and import it? not sure
 */
-
-interface Country {
-  name: string;
-  flag: string;
-  tips: number;
-  linkName: string;
-  categories: string[];
-}
 interface CardProps {
   country: Country;
 }
