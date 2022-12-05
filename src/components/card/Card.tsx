@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
-import Country from "../interfaces/Country.interface";
+import Country from "../../interfaces/Country.interface";
 
-import "../css/card.css";
+import "../../css/card/card.css";
 
 /*
 add interfaces in a file and import it? not sure
@@ -27,7 +27,7 @@ class Card extends React.Component<CardProps> {
             <header className="card__header">
               <img
                 className="card__flag"
-                src={require(`../assets/images/flags/${this.props.country.flag}.png`)}
+                src={require(`../../assets/images/flags/${this.props.country.flag}.png`)}
                 alt={`${this.props.country.name} flag`}
               />
               <h2 className="card__title">{this.props.country.name}</h2>

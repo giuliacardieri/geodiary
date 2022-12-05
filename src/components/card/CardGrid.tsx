@@ -1,7 +1,7 @@
 import React from "react";
-import "../css/cardGrid.css";
+import "../../css/card/cardGrid.css";
 import Card from "./Card";
-import Country from "../interfaces/Country.interface";
+import Country from "../../interfaces/Country.interface";
 
 /*
 props:

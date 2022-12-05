@@ -1,5 +1,5 @@
-import "../css/header.css";
-import "../css/illustrations.css";
+import "../../css/layout/header.css";
+import "../../css/illustrations.css";
 
 function Header() {
   return (

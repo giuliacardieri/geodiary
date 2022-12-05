@@ -1,0 +1,7 @@
+.form--inline {
+  align-items: center;
+  display: flex;
+  flex-basis: 50%;
+  gap: 0.5rem;
+  margin-right: auto;
+}

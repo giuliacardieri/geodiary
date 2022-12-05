@@ -1,7 +1,8 @@
 :root {
   --primary-blue: #154c79;
   --secondary-light-blue: #76b5c5;
-  --accent-orange: #e28743;
+  --accent-green: #5e8248;
+  --accent-green-dark: #425c32;
   --white: #ffffff;
   --dark: #282828;
   --transparent-dark: rgba(0, 0, 0, 0.3);
