@@ -13,18 +13,21 @@
   position: absolute;
 }
 
+.input__group {
+  align-items: center;
+  border: 1px solid var(--dark);
+  border-radius: var(--border-radius);
+  display: flex;
+  width: 100%;
+}
+
 .input__input {
   background-color: transparent;
   border: none;
+  flex: 1;
   font-size: 1rem;
   line-height: 1;
   padding: 0.5rem;
-}
-
-.input__group {
-  border: 1px solid var(--dark);
-  border-radius: var(--border-radius);
-  width: 100%;
 }
 
 .input__icon {

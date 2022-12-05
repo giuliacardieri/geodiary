@@ -4,7 +4,12 @@ import Form from "./form/Form";
 import Input from "./form/Input";
 import Country from "../interfaces/Country.interface";
 import "../css/filterOrder.css";
-import { faFilter, faSearch, faSort } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAdd,
+  faFilter,
+  faSearch,
+  faSort,
+} from "@fortawesome/free-solid-svg-icons";
 
 /*
 props:
@@ -60,6 +65,7 @@ class FilterOrder extends React.Component<
           />
           <Button label="Go" />
         </Form>
+        <Button label="New tip/country" secondary icon={faAdd} />
         <Button label="Order" icon={faSort} />
         <Button label="Filter" icon={faFilter} />
       </div>

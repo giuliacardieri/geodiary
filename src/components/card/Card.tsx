@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook, faTag } from "@fortawesome/free-solid-svg-icons";
+
 import Country from "../../interfaces/Country.interface";
 
 import "../../css/card/card.css";
@@ -25,19 +28,28 @@ class Card extends React.Component<CardProps> {
             className="card__link"
           >
             <header className="card__header">
+              <h2 className="card__title">{this.props.country.name}</h2>
               <img
                 className="card__flag"
                 src={require(`../../assets/images/flags/${this.props.country.flag}.png`)}
                 alt={`${this.props.country.name} flag`}
               />
-              <h2 className="card__title">{this.props.country.name}</h2>
             </header>
             <div className="card__info">
-              <h3 className="card__text">{this.props.country.tips} tips</h3>
+              <h3 className="card__text">
+                <FontAwesomeIcon
+                  className="card__icon card__icon--margin-large"
+                  icon={faBook}
+                />
+                {this.props.country.tips} tips
+              </h3>
               {this.props.country.categories.length && (
                 <div className="card__categories">
                   {this.props.country.categories.map((category) => (
-                    <span className="card__category">{category}</span>
+                    <span className="card__category">
+                      <FontAwesomeIcon className="card__icon" icon={faTag} />
+                      {category}
+                    </span>
                   ))}
                 </div>
               )}

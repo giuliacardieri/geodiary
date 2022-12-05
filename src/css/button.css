@@ -12,12 +12,22 @@
   text-transform: uppercase;
 }
 
-.button__icon {
-  margin-right: 0.5rem;
-}
-
 .button:hover,
 .button:focus,
 .button:active {
   background-color: var(--accent-green-dark);
+}
+
+.button--secondary {
+  background-color: var(--primary-blue);
+}
+
+.button--secondary:hover,
+.button--secondary:focus,
+.button--secondary:active {
+  background-color: var(--primary-blue-dark);
+}
+
+.button__icon {
+  margin-right: 0.5rem;
 }

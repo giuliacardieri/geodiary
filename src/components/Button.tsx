@@ -7,11 +7,12 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import "../css/button.css";
 
 interface ButtonProps {
-  link?: string;
-  click?: Function;
   ariaLabel?: string;
-  label: string;
+  click?: Function;
   icon?: IconProp;
+  label: string;
+  link?: string;
+  secondary?: boolean;
 }
 class Button extends React.Component<ButtonProps> {
   constructor(props: ButtonProps) {
@@ -23,7 +24,9 @@ class Button extends React.Component<ButtonProps> {
       <Router>
         <Link
           to={`/${this.props.link}`}
-          className="button"
+          className={`button ${
+            this.props.secondary ? "button--secondary" : ""
+          }`}
           aria-label={this.props.ariaLabel}
         >
           {this.props.icon ? (
@@ -33,7 +36,10 @@ class Button extends React.Component<ButtonProps> {
         </Link>
       </Router>
     ) : (
-      <button className="button" aria-label={this.props.ariaLabel}>
+      <button
+        className={`button ${this.props.secondary ? "button--secondary" : ""}`}
+        aria-label={this.props.ariaLabel}
+      >
         {this.props.icon ? (
           <FontAwesomeIcon className="button__icon" icon={this.props.icon} />
         ) : null}
